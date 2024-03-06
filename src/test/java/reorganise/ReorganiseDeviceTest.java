@@ -1,4 +1,5 @@
 package reorganise;
+
 import devices.Device;
 import devices.FailingPolicy;
 import devices.StandardDevice;
@@ -6,10 +7,11 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;
+
 import java.util.stream.IntStream;
+
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
-import static org.mockito.Mockito.verifyNoInteractions;
 
 public class ReorganiseDeviceTest {
     private Device device;

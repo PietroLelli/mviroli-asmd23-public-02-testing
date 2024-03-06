@@ -1,11 +1,14 @@
 package devices;
 
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Nested;
+import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
+
 import java.util.stream.IntStream;
 
-import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
-
-import org.mockito.Mockito;
 import static org.mockito.Mockito.*;
 
 public class StandardDeviceTest {
