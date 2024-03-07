@@ -6,8 +6,8 @@ import org.mockito.Mock;
 
 import static org.mockito.Mockito.*;
 /*
-Classe di iteration test per controllare le interazioni tra GUI e Logic,
-agendo solo sulla GUI e verificando che i metodi della Logic vengano chiamati.
+Integration test class to check the interactions between the GUI and Logic,
+acting only on the GUI and checking that Logic methods are called.
 */
 public class GuiLogicTest {
     @Mock Logic mockLogic = mock(Logic.class);
@@ -21,9 +21,9 @@ public class GuiLogicTest {
     @Test
     public void testGuiHit() {
         gui.clickButton(new Position(1, 1));
-        //Verifica che al click di un bottone venga chiamato il metodo hit della Logic.
+        //Checks that when a button is clicked, the Logic hit method is called.
         verify(mockLogic, times(1)).hit(new Position(1,1));
-        //Verifica che non venga chiamato il metodo hit della Logic su una posizione diversa da quella cliccata.
+        //Checks that the Logic hit method is not called on a position other than the one clicked.
         verify(mockLogic, times(0)).hit(new Position(2,1));
     }
 }

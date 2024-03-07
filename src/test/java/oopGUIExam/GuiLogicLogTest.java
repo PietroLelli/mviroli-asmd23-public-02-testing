@@ -6,8 +6,8 @@ import org.mockito.Mock;
 
 import static org.mockito.Mockito.*;
 /*
-Classe di iteration test per controllare le interazioni tra GUI, Logic e Log,
-agendo solo sulla GUI e verificando che i metodi del Log vengano chiamati nei momenti giusti.
+Integration test class to check the interactions between GUI, Logic and Log,
+acting only on the GUI and checking that the Log methods are called at the right times.
 */
 public class GuiLogicLogTest {
 
@@ -23,7 +23,7 @@ public class GuiLogicLogTest {
     @Test
     void testNewMarkLog() {
         gui.clickButton(new Position(1,1));
-        //Controlla che venga chiamato il log newMark se clicco su una cella
+        //Checks that the newMark log is called if I click on a cell.
         verify(mockLog, times(1)).newMark(new Position(1,1));
     }
 
@@ -32,7 +32,7 @@ public class GuiLogicLogTest {
         gui.clickButton(new Position(1,1));
         verify(mockLog, times(1)).newMark(new Position(1,1));
         gui.clickButton(new Position(1,2));
-        //Controlla che non venga chiamato il log newMark se clicco su una cella adiacente ad una con il mark
+        //Check that the newMark log is not called if I click on a cell adjacent to one with the marker.
         verify(mockLog, times(0)).newMark(new Position(1,2));
     }
 
@@ -40,7 +40,8 @@ public class GuiLogicLogTest {
     void testMovedLog() {
         gui.clickButton(new Position(7,7));
         gui.clickButton(new Position(8,8));
-        //Controlla che venga chiamato il log moved se clicco su una cella adiacente ad una con il mark e quindi i mark si muoveranno
+        //Checks that the log moved is called if I click on a cell adjacent to one with the marker.
+        //and then the marks will move
         verify(mockLog, times(1)).moved();
     }
 }
