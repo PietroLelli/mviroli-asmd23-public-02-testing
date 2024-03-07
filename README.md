@@ -27,7 +27,7 @@ We introduced a Log class to the project, available in the file **oopGUIExam/Log
 3. "isOver" - when a marker exits the borders.
 
 ### Integration Testing
-All file tests are available in the file: **test/oopGUIExam**.
+All file tests are available in the folder: **test/oopGUIExam**.
 Integration tests were conducted to ensure seamless interactions between classes:
 
 1. **Logic - Log**
